@@ -53,7 +53,7 @@ public class Quiz_10798 {
 				sb.append(inputCh[j][i]);
 			}
 		}
-		result = sb.toString().trim();
+		result = sb.toString();
 		return result;
 	}
 	
