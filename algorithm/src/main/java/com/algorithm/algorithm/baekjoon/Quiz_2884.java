@@ -44,6 +44,7 @@ public class Quiz_2884 {
 	public static void main(String[] args) throws ParseException, IOException {
 		Quiz_2884 quiz = new Quiz_2884();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		System.out.println(quiz.solution(br));
 	}
 }
