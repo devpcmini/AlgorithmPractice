@@ -31,7 +31,7 @@ public class Quiz_2490 {
 	public static void main(String[] args) throws IOException {
 		Quiz_2490 quiz = new Quiz_2490();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+		 
 		System.out.println(quiz.solution(br));
 	}
 }
