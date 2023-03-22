@@ -61,7 +61,7 @@ public class Quiz_10798 {
 	public static void main(String[] args) throws IOException {
 		Quiz_10798 quiz = new Quiz_10798();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		 
+		
 		System.out.println(quiz.solution(br));
 	}
 }
