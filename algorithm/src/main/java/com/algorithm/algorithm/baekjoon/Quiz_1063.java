@@ -28,6 +28,8 @@ public class Quiz_1063 {
 	킹과 돌의 마지막 위치를 구하는 프로그램을 작성하시오.
 	 */
 	public static void main(String[] args) throws IOException {
+		System.out.println("첫째 줄에 킹의 위치, 돌의 위치, 움직이는 횟수 N이 주어진다. 둘째 줄부터 N개의 줄에는 킹이 어떻게 움직여야 하는지 주어진다. "
+				+ "N은 50보다 작거나 같은 자연수이고, 움직이는 정보는 위에 쓰여 있는 8가지 중 하나이다.\n");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		String king = st.nextToken();
@@ -48,6 +50,7 @@ public class Quiz_1063 {
 				}
 			}
 		}
+		System.out.println("\n첫째 줄에 킹의 마지막 위치, 둘째 줄에 돌의 마지막 위치를 출력한다.\n");
 		System.out.println(king);
 		System.out.println(stone);
 	}
