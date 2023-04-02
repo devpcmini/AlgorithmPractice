@@ -19,7 +19,8 @@ public class Quiz_2609 {
 		int N2 = Integer.parseInt(st.nextToken());
 		int max = divisor(N1,N2);
 		int min = multiple(N1,N2);
-		System.out.println("\n첫째 줄에는 입력으로 주어진 두 수의 최대공약수를, 둘째 줄에는 입력으로 주어진 두 수의 최소 공배수를 출력한다.\n");
+		System.out.println("\n첫째 줄에는 입력으로 주어진 두 수의 최대공약수를, "
+				+ "둘째 줄에는 입력으로 주어진 두 수의 최소 공배수를 출력한다.\n");
 		System.out.println(max);
 		System.out.println(min);
 	}
