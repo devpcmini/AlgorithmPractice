@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-//숫자야구 친구가 해보래서 해봄
 public class songjoon {
-	public static void main(String[] args) throws IOException {
+	//숫자야구 친구가 해보래서 해봄
+	/*public static void main(String[] args) throws IOException {
 		int[] answer = new int[3];
 		answer[0] = random(0,0);
 		answer[1] = random(answer[0],0);
@@ -50,5 +50,44 @@ public class songjoon {
 		int result = (int) (Math.random() * 9) + 1;
 		result = A == result || B == result ? random(A,B) : result;
 		return result;
+	}*/
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		System.out.println("몇개 생성?");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		for(int i=1; i<=N; i++) {
+			System.out.println("보너스 번호 Y/N");
+			br = new BufferedReader(new InputStreamReader(System.in));
+			int[] arr;
+			String bonusYn = br.readLine().toUpperCase();
+			if("Y".equals(bonusYn)) {
+				arr = new int[7];
+			} else if("N".equals(bonusYn)) {
+				arr = new int[6];
+			} else {
+				System.out.println("Y 아니면 N만 입력가능");
+				return;
+			}
+			for(int j=0; j<arr.length; j++) {
+				arr[j] = (int)(Math.random() * 45 +1);
+				for(int z=0; z<j; z++) {
+					if(arr[j] == arr[z]) {
+						j--;
+						break;
+					}
+				}
+			}
+			Integer[] integerArr = new Integer[6];
+			for(int g=0; g<integerArr.length; g++) {
+				integerArr[g] = arr[g];
+			}
+			Arrays.sort(integerArr);
+			if("Y".equals(bonusYn)) {
+				System.out.println(i + "회차 :: " + Arrays.toString(integerArr) + "보너스 " + arr[6]);
+			} else {
+				System.out.println(i + "회차 :: " + Arrays.toString(integerArr));
+			}
+			
+		}
 	}
 }
