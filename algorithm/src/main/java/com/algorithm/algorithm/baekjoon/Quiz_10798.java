@@ -26,42 +26,54 @@ public class Quiz_10798 {
 	
 	칠판에 붙여진 단어들이 주어질 때, 영석이가 세로로 읽은 순서대로 글자들을 출력하는 프로그램을 작성하시오.*/
 	
-	private String solution(BufferedReader br) throws IOException {
-		String result = "";
-		
-		char[][] inputCh = new char[5][15];
-		int max = 0;
-		String str = "";
-		for(int i=0; i<inputCh.length; i++) {
-			str = br.readLine();
-			if(max < str.length()) {
-				max = str.length();
-			}
-			for(int j=0; j<str.length(); j++) {
-				inputCh[i][j] = str.charAt(j);
-				System.out.println(str.charAt(j));
-			}
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		
-		for(int i=0; i<max; i++) {
-			for(int j=0; j<5; j++) {
-				//'\0' 문자는 null 값을 나타냅니다
-				if(inputCh[j][i] == '\0') {
-					continue;
-				}
-				sb.append(inputCh[j][i]);
-			}
-		}
-		result = sb.toString();
-		return result;
-	}
+//	private String solution(BufferedReader br) throws IOException {
+//		String result = "";
+//		
+//		char[][] inputCh = new char[5][15];
+//		int max = 0;
+//		String str = "";
+//		for(int i=0; i<inputCh.length; i++) {
+//			str = br.readLine();
+//			if(max < str.length()) {
+//				max = str.length();
+//			}
+//			for(int j=0; j<str.length(); j++) {
+//				inputCh[i][j] = str.charAt(j);
+//				System.out.println(str.charAt(j));
+//			}
+//		}
+//		
+//		StringBuilder sb = new StringBuilder();
+//		
+//		for(int i=0; i<max; i++) {
+//			for(int j=0; j<5; j++) {
+//				//'\0' 문자는 null 값을 나타냅니다
+//				if(inputCh[j][i] == '\0') {
+//					continue;
+//				}
+//				sb.append(inputCh[j][i]);
+//			}
+//		}
+//		result = sb.toString();
+//		return result;
+//	}
 	
 	public static void main(String[] args) throws IOException {
-		Quiz_10798 quiz = new Quiz_10798();
+//		Quiz_10798 quiz = new Quiz_10798();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		System.out.println(quiz.solution(br));
+		String[][] arr = new String[5][15];
+		arr[0] = br.readLine().split("");
+		arr[1] = br.readLine().split("");
+		arr[2] = br.readLine().split("");
+		arr[3] = br.readLine().split("");
+		arr[4] = br.readLine().split("");
+		for(int i=0; i<15; i++) {
+			System.out.print(arr[0].length > i ? arr[0][i] : "");
+			System.out.print(arr[1].length > i ? arr[1][i] : "");
+			System.out.print(arr[2].length > i ? arr[2][i] : "");
+			System.out.print(arr[3].length > i ? arr[3][i] : "");
+			System.out.print(arr[4].length > i ? arr[4][i] : "");
+		}
+//		System.out.println(quiz.solution(br));
 	}
 }
