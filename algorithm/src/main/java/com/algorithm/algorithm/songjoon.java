@@ -3,7 +3,6 @@ package com.algorithm.algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class songjoon {
 	//숫자야구 친구가 해보래서 해봄
@@ -51,7 +50,7 @@ public class songjoon {
 		result = A == result || B == result ? random(A,B) : result;
 		return result;
 	}*/
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	/*public static void main(String[] args) throws NumberFormatException, IOException {
 		System.out.println("몇개 생성?");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
@@ -89,5 +88,69 @@ public class songjoon {
 			}
 			
 		}
+	}*/
+	/*public static void main(String[] args) throws IOException {
+		int[] arr = {1,7,8,4};
+		Student[] sArr = new Student[5];
+		for(int i=0; i<sArr.length; i++) {
+			sArr[i] = new Student();
+		}
+		sArr[0].setInfo(1);
+		sArr[1].setInfo(2);
+		sArr[2].setInfo(3);
+		sArr[3].setInfo(4);
+		sArr[4].setInfo(5);
+		
+		int maxScore = sArr[0].sum;
+		for(int i=0; i<sArr.length; i++) {
+			//최고점수 구하기
+			for(int j =1; j<sArr.length; j++) {
+				if(maxScore < sArr[j].sum) {
+					maxScore = sArr[j].sum;
+				}
+			}
+			//최고점수로 반복문 돌면서 로그 찍기
+			if(maxScore == sArr[i].sum) {
+				sArr[i].getInfo();
+			}
+		}
+	}*/
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str = br.readLine();
+		String[] arr = {"송준","통준","통수"};
+		for(int i=0; i<arr.length; i++) {
+			if(str.indexOf(arr[i]) > -1) {
+				int index = str.indexOf(arr[i]);
+				for(int j=index; j<index+arr[i].length(); j++) {
+					str = str.replace(String.valueOf(str.charAt(j)), "*");
+				}
+			}
+		}
+		System.out.println(str);
 	}
 }
+
+/*class Student {
+	String name;
+	int kor;
+	int eng;
+	int sum;
+	
+	
+	public void setInfo(int i) {
+		switch(i) {
+			case 1 : name = "박창민"; kor = 50; eng = 100; sum = kor + eng; break;
+			case 2 : name = "송준"; kor = 100; eng = 100; sum = kor + eng; break;
+			case 3 : name = "김도영"; kor = 0; eng = 10; sum = kor + eng; break;
+			case 4 : name = "김동기"; kor = 70; eng = 80; sum = kor + eng; break;
+			case 5 : name = "홍"; kor = 10; eng = 30; sum = kor + eng; break; 
+		}
+	}
+	
+	public void getInfo() {
+		System.out.println(name + "/" + kor + "/" + eng + "/" + sum); 
+	}
+}*/
+
