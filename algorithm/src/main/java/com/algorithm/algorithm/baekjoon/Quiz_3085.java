@@ -3,7 +3,6 @@ package com.algorithm.algorithm.baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Quiz_3085 {
 	/*3085 : 사탕 게임
